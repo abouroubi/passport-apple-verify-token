@@ -5,7 +5,7 @@
 ![License](https://img.shields.io/npm/l/passport-facebook-token.svg)
 
 
-[Passport](http://passportjs.org/) strategy for validating [Apple](http://www.apple.com/)
+[Passport](http://passportjs.org/) strategy for validating [Apple](https://developer.apple.com/documentation/sign_in_with_apple/sign_in_with_apple_rest_api/authenticating_users_with_sign_in_with_apple)
 access tokens using the OAuth 2.0 API.
 
 This module lets you validate SignIn with Apple tokens in your Node.js applications.
