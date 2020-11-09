@@ -89,7 +89,7 @@ export class AppleTokenStrategy extends Strategy {
    * @param {Object} req
    * @api protected
    */
-  public authenticate(req: any, options: any) {
+  public authenticate(req: any, options: Options) {
     options = options || {};
 
     const idToken =
@@ -171,11 +171,12 @@ export class AppleTokenStrategy extends Strategy {
   /**
    * Gets the id token value from req using name for lookup in req.body, req.query,
    * and req.params.
+   *
    * @param {express.Request} req
    * @param {string} name  the key to use to lookup id token in req.
    * @api protected
    */
-  private paramFromRequest(req: any, name: string) {
+  private paramFromRequest(req: any, name: string): string {
     const body = req.body || {};
     const query = req.query || {};
     const params = req.params || {};
@@ -192,7 +193,7 @@ export class AppleTokenStrategy extends Strategy {
     return params[name] || '';
   }
 
-  private getBearerToken(headers: any) {
+  private getBearerToken(headers: { authorization: string }): string | undefined {
     if (headers && headers.authorization) {
       const parts = headers.authorization.split(' ');
       return parts.length === 2 && parts[0] === 'Bearer' ? parts[1] : undefined;
