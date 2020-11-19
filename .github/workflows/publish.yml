@@ -14,7 +14,7 @@ jobs:
   
   build:
     runs-on: ubuntu-latest
-    if: "!contains(github.event.head_commit.message, 'version bump to')"
+    if: "!contains(github.event.head_commit.message, 'version bump to') || !contains(github.event.head_commit.message, 'skip ci')"
     outputs:
       tag: ${{ steps.tag_name.outputs.TAG }}
     steps:
