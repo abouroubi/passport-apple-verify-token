@@ -1,8 +1,8 @@
 # passport-apple-verify-token
 
-[![Build Status](https://dev.azure.com/abdouslayne/Personal%20Projects/_apis/build/status/passport-google-verify-token?branchName=master)](https://dev.azure.com/abdouslayne/Personal%20Projects/_build/latest?definitionId=2?branchName=master)
-[![npm version](https://badge.fury.io/js/passport-google-verify-token.svg)](https://badge.fury.io/js/passport-google-verify-token)
-![License](https://img.shields.io/npm/l/passport-facebook-token.svg)
+![Node.js CI](https://github.com/abouroubi/passport-apple-verify-token/workflows/Node.js%20CI/badge.svg)
+[![npm version](https://badge.fury.io/js/passport-apple-verify-token.svg)](https://badge.fury.io/js/passport-apple-verify-token)
+![License](https://img.shields.io/npm/l/passport-apple-verify-token.svg)
 
 
 [Passport](http://passportjs.org/) strategy for validating [Apple](https://developer.apple.com/documentation/sign_in_with_apple/sign_in_with_apple_rest_api/authenticating_users_with_sign_in_with_apple)
