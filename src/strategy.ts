@@ -71,6 +71,10 @@ export class AppleTokenStrategy extends Strategy {
       throw new Error('AppleVerifyTokenStrategy requires a verify function');
     }
 
+    if(!options.clientId) {
+      throw new Error('AppleVerifyTokenStrategy requires a ClientID');
+    }
+
     this.appleIdKeysUrl = options.appleIdKeysUrl || 'https://appleid.apple.com/auth/keys';
     this.appleIssuer = options.appleIssuer || 'https://appleid.apple.com';
     this.clientId = options.clientId;
