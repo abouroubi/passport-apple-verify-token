@@ -33,7 +33,7 @@ type Options = {
  * Examples:
  *
  * passport.use(new AppleTokenStrategy({
- *     clientID: 'apple_client_id', // Specify the CLIENT_ID of the app that accesses the backend
+ *     clientId: 'apple_client_id', // Specify the CLIENT_ID of the app that accesses the backend
  *     // Or, if multiple clients access the backend:
  *     //[CLIENT_ID_1, CLIENT_ID_2, CLIENT_ID_3]
  *     appleIdKeysUrl?: 'https://appleid.apple.com/auth/keys', // OPTIONAL: Specify the url to get Apple auth keys
@@ -72,7 +72,7 @@ export class AppleTokenStrategy extends Strategy {
     }
 
     if(!options.clientId) {
-      throw new Error('AppleVerifyTokenStrategy requires a ClientID');
+      throw new Error('AppleVerifyTokenStrategy requires a clientId');
     }
 
     this.appleIdKeysUrl = options.appleIdKeysUrl || 'https://appleid.apple.com/auth/keys';
